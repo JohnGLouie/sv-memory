@@ -21,13 +21,13 @@ module sync_fifo #(
 
         input we_i,
         input [DATA_WIDTH-1:0] data_i,
-        output logic full_i,
+        output logic full_o,
 
         input re_i,
         output logic [DATA_WIDTH-1:0] data_o,
-        output logic empty_i,
+        output logic empty_o,
 
-        output logic [$clog2(FIFO_DEPTH)-1:0] count_o
+        output logic [$clog2(FIFO_DEPTH):0] count_o
 
         // TODO: add almost empty and almost full flags.
     )
